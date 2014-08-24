@@ -1,0 +1,73 @@
+<h1>Listing mat_prods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Matprod category code</th>
+      <th>Matprod sub code</th>
+      <th>Matprod type</th>
+      <th>Matprod code</th>
+      <th>Matprod refcode</th>
+      <th>Matprod shortdesc</th>
+      <th>Matprod remarks</th>
+      <th>Matprod status</th>
+      <th>Matprod cost price</th>
+      <th>Matprod selling price</th>
+      <th>Matprod uom</th>
+      <th>Matprod photo</th>
+      <th>Matprod cost code</th>
+      <th>Matprod barcode</th>
+      <th>Updated user</th>
+      <th>Matprod is batch serial</th>
+      <th>Matprod is batch only</th>
+      <th>Matprod est weight gram</th>
+      <th>Matprod size mm</th>
+      <th>Matprod length mm</th>
+      <th>Matprod thikness mm</th>
+      <th>Matprod is hollow</th>
+      <th>Matprod is solid</th>
+      <th>Matprod is melting process</th>
+      <th>Matprod is weight item</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mat_prods.each do |mat_prod| %>
+      <tr>
+        <td><%= mat_prod.matprod_category_code %></td>
+        <td><%= mat_prod.matprod_sub_code %></td>
+        <td><%= mat_prod.matprod_type %></td>
+        <td><%= mat_prod.matprod_code %></td>
+        <td><%= mat_prod.matprod_refcode %></td>
+        <td><%= mat_prod.matprod_shortdesc %></td>
+        <td><%= mat_prod.matprod_remarks %></td>
+        <td><%= mat_prod.matprod_status %></td>
+        <td><%= mat_prod.matprod_cost_price %></td>
+        <td><%= mat_prod.matprod_selling_price %></td>
+        <td><%= mat_prod.matprod_uom %></td>
+        <td><%= mat_prod.matprod_photo %></td>
+        <td><%= mat_prod.matprod_cost_code %></td>
+        <td><%= mat_prod.matprod_barcode %></td>
+        <td><%= mat_prod.updated_user_id %></td>
+        <td><%= mat_prod.matprod_is_batch_serial %></td>
+        <td><%= mat_prod.matprod_is_batch_only %></td>
+        <td><%= mat_prod.matprod_est_weight_gram %></td>
+        <td><%= mat_prod.matprod_size_mm %></td>
+        <td><%= mat_prod.matprod_length_mm %></td>
+        <td><%= mat_prod.matprod_thikness_mm %></td>
+        <td><%= mat_prod.matprod_is_hollow %></td>
+        <td><%= mat_prod.matprod_is_solid %></td>
+        <td><%= mat_prod.matprod_is_melting_process %></td>
+        <td><%= mat_prod.matprod_is_weight_item %></td>
+        <td><%= link_to 'Show', mat_prod %></td>
+        <td><%= link_to 'Edit', edit_mat_prod_path(mat_prod) %></td>
+        <td><%= link_to 'Destroy', mat_prod, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mat prod', new_mat_prod_path %>

@@ -1,0 +1,117 @@
+<%= form_for(@mat_prod) do |f| %>
+  <% if @mat_prod.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mat_prod.errors.count, "error") %> prohibited this mat_prod from being saved:</h2>
+
+      <ul>
+      <% @mat_prod.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :matprod_category_code %><br>
+    <%= f.text_field :matprod_category_code %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_sub_code %><br>
+    <%= f.text_field :matprod_sub_code %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_type %><br>
+    <%= f.text_field :matprod_type %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_code %><br>
+    <%= f.text_field :matprod_code %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_refcode %><br>
+    <%= f.text_field :matprod_refcode %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_shortdesc %><br>
+    <%= f.text_field :matprod_shortdesc %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_remarks %><br>
+    <%= f.text_area :matprod_remarks %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_status %><br>
+    <%= f.text_field :matprod_status %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_cost_price %><br>
+    <%= f.text_field :matprod_cost_price %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_selling_price %><br>
+    <%= f.text_field :matprod_selling_price %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_uom %><br>
+    <%= f.text_field :matprod_uom %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_photo %><br>
+    <%= f.text_field :matprod_photo %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_cost_code %><br>
+    <%= f.text_field :matprod_cost_code %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_barcode %><br>
+    <%= f.text_field :matprod_barcode %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_user_id %><br>
+    <%= f.number_field :updated_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_is_batch_serial %><br>
+    <%= f.check_box :matprod_is_batch_serial %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_is_batch_only %><br>
+    <%= f.check_box :matprod_is_batch_only %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_est_weight_gram %><br>
+    <%= f.text_field :matprod_est_weight_gram %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_size_mm %><br>
+    <%= f.text_field :matprod_size_mm %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_length_mm %><br>
+    <%= f.text_field :matprod_length_mm %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_thikness_mm %><br>
+    <%= f.text_field :matprod_thikness_mm %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_is_hollow %><br>
+    <%= f.check_box :matprod_is_hollow %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_is_solid %><br>
+    <%= f.check_box :matprod_is_solid %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_is_melting_process %><br>
+    <%= f.check_box :matprod_is_melting_process %>
+  </div>
+  <div class="field">
+    <%= f.label :matprod_is_weight_item %><br>
+    <%= f.check_box :matprod_is_weight_item %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

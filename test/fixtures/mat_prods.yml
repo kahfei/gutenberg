@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  matprod_category_code: MyString
+  matprod_sub_code: MyString
+  matprod_type: MyString
+  matprod_code: MyString
+  matprod_refcode: MyString
+  matprod_shortdesc: MyString
+  matprod_remarks: MyText
+  matprod_status: MyString
+  matprod_cost_price: 9.99
+  matprod_selling_price: 9.99
+  matprod_uom: MyString
+  matprod_photo: MyString
+  matprod_cost_code: MyString
+  matprod_barcode: MyString
+  updated_user_id: 1
+  matprod_is_batch_serial: false
+  matprod_is_batch_only: false
+  matprod_est_weight_gram: 9.99
+  matprod_size_mm: 9.99
+  matprod_length_mm: 9.99
+  matprod_thikness_mm: 9.99
+  matprod_is_hollow: false
+  matprod_is_solid: false
+  matprod_is_melting_process: false
+  matprod_is_weight_item: false
+
+two:
+  matprod_category_code: MyString
+  matprod_sub_code: MyString
+  matprod_type: MyString
+  matprod_code: MyString
+  matprod_refcode: MyString
+  matprod_shortdesc: MyString
+  matprod_remarks: MyText
+  matprod_status: MyString
+  matprod_cost_price: 9.99
+  matprod_selling_price: 9.99
+  matprod_uom: MyString
+  matprod_photo: MyString
+  matprod_cost_code: MyString
+  matprod_barcode: MyString
+  updated_user_id: 1
+  matprod_is_batch_serial: false
+  matprod_is_batch_only: false
+  matprod_est_weight_gram: 9.99
+  matprod_size_mm: 9.99
+  matprod_length_mm: 9.99
+  matprod_thikness_mm: 9.99
+  matprod_is_hollow: false
+  matprod_is_solid: false
+  matprod_is_melting_process: false
+  matprod_is_weight_item: false

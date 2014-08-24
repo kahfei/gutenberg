@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: gutenberg_production
-  username: gutenberg
+  #username: gutenberg
   password: <%= ENV['GUTENBERG_DATABASE_PASSWORD'] %>
