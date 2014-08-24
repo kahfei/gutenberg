@@ -16,4 +16,6 @@ class MatProd < ActiveRecord::Base
     validates :matprod_size_mm, presence: true
     validates :matprod_length_mm, presence: true
     validates :matprod_thikness_mm, presence: true
+
+    belongs_to :category
 end

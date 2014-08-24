@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823100806) do
+ActiveRecord::Schema.define(version: 20140824163335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: true do |t|
+    t.string   "category_name"
+    t.integer  "updated_user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "mat_prods", force: true do |t|
-    t.string   "matprod_category_code",      limit: 3
+    t.string   "category_id",                limit: 3
     t.string   "matprod_sub_code",           limit: 3
     t.string   "matprod_type",               limit: 2
     t.string   "matprod_code",               limit: 25

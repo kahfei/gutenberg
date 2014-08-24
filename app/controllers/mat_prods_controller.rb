@@ -15,6 +15,7 @@ class MatProdsController < ApplicationController
   # GET /mat_prods/new
   def new
     @mat_prod = MatProd.new
+    @categories = Category.all
   end
 
   # GET /mat_prods/1/edit
