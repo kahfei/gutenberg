@@ -15,7 +15,7 @@ class CreateMatProds < ActiveRecord::Migration
       t.string :matprod_photo, :limit => 150
       t.string :matprod_cost_code, :limit => 20
       t.string :matprod_barcode, :limit => 100
-      t.integer :updated_user_id, :limit => 11
+      t.integer :updated_user_id, :precision => 11
       t.boolean :matprod_is_batch_serial
       t.boolean :matprod_is_batch_only
       t.decimal :matprod_est_weight_gram, :limit => 10
