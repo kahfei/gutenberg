@@ -13,8 +13,7 @@
 
   <div class="field">
     <%= f.label :cagegory_id %><br>
-    <%= f.text_field :category_id %>
-    <%= f.collection_select(:category_id, @categories, :id, :category_name) %>
+    <%= f.collection_select(:category_id, @categories, :id, :category_code) %>
   </div>
   <div class="field">
     <%= f.label :matprod_sub_code %><br>
