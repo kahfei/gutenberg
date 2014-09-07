@@ -1,5 +1,4 @@
 class MatProd < ActiveRecord::Base
-	validates :matprod_category_code, presence: true
     validates :matprod_sub_code, presence: true
     validates :matprod_type, presence: true
     validates :matprod_code, presence: true

@@ -2,7 +2,7 @@
 
 <p>
   <strong>Matprod category code:</strong>
-  <%= @mat_prod.matprod_category_code %>
+  <%= @mat_prod.category_id %>
 </p>
 
 <p>
@@ -77,12 +77,12 @@
 
 <p>
   <strong>Matprod is batch serial:</strong>
-  <%= @mat_prod.matprod_is_batch_serial %>
+  <%= t @mat_prod.matprod_is_batch_serial.class %>
 </p>
 
 <p>
   <strong>Matprod is batch only:</strong>
-  <%= @mat_prod.matprod_is_batch_only %>
+  <%= t @mat_prod.matprod_is_batch_only.class %>
 </p>
 
 <p>
@@ -107,22 +107,22 @@
 
 <p>
   <strong>Matprod is hollow:</strong>
-  <%= @mat_prod.matprod_is_hollow %>
+  <%= t @mat_prod.matprod_is_hollow.class %>
 </p>
 
 <p>
   <strong>Matprod is solid:</strong>
-  <%= @mat_prod.matprod_is_solid %>
+  <%= t @mat_prod.matprod_is_solid.class %>
 </p>
 
 <p>
   <strong>Matprod is melting process:</strong>
-  <%= @mat_prod.matprod_is_melting_process %>
+  <%= t @mat_prod.matprod_is_melting_process.class %>
 </p>
 
 <p>
   <strong>Matprod is weight item:</strong>
-  <%= @mat_prod.matprod_is_weight_item %>
+  <%= t @mat_prod.matprod_is_weight_item.class %>
 </p>
 
 <%= link_to 'Edit', edit_mat_prod_path(@mat_prod) %> |

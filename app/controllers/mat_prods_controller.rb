@@ -20,12 +20,14 @@ class MatProdsController < ApplicationController
 
   # GET /mat_prods/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /mat_prods
   # POST /mat_prods.json
   def create
     @mat_prod = MatProd.new(mat_prod_params)
+    @categories = Category.all
 
     respond_to do |format|
       if @mat_prod.save
@@ -70,6 +72,6 @@ class MatProdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mat_prod_params
-      params.require(:mat_prod).permit(:matprod_category_code, :matprod_sub_code, :matprod_type, :matprod_code, :matprod_refcode, :matprod_shortdesc, :matprod_remarks, :matprod_status, :matprod_cost_price, :matprod_selling_price, :matprod_uom, :matprod_photo, :matprod_cost_code, :matprod_barcode, :updated_user_id, :matprod_is_batch_serial, :matprod_is_batch_only, :matprod_est_weight_gram, :matprod_size_mm, :matprod_length_mm, :matprod_thikness_mm, :matprod_is_hollow, :matprod_is_solid, :matprod_is_melting_process, :matprod_is_weight_item)
+      params.require(:mat_prod).permit(:category_id, :matprod_sub_code, :matprod_type, :matprod_code, :matprod_refcode, :matprod_shortdesc, :matprod_remarks, :matprod_status, :matprod_cost_price, :matprod_selling_price, :matprod_uom, :matprod_photo, :matprod_cost_code, :matprod_barcode, :updated_user_id, :matprod_is_batch_serial, :matprod_is_batch_only, :matprod_est_weight_gram, :matprod_size_mm, :matprod_length_mm, :matprod_thikness_mm, :matprod_is_hollow, :matprod_is_solid, :matprod_is_melting_process, :matprod_is_weight_item)
     end
 end

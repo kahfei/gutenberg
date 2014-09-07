@@ -35,7 +35,7 @@
   <tbody>
     <% @mat_prods.each do |mat_prod| %>
       <tr>
-        <td><%= mat_prod.matprod_category_code %></td>
+        <td><%= mat_prod.category.category_name%></td>
         <td><%= mat_prod.matprod_sub_code %></td>
         <td><%= mat_prod.matprod_type %></td>
         <td><%= mat_prod.matprod_code %></td>
@@ -50,16 +50,16 @@
         <td><%= mat_prod.matprod_cost_code %></td>
         <td><%= mat_prod.matprod_barcode %></td>
         <td><%= mat_prod.updated_user_id %></td>
-        <td><%= mat_prod.matprod_is_batch_serial %></td>
-        <td><%= mat_prod.matprod_is_batch_only %></td>
+        <td><%= t mat_prod.matprod_is_batch_serial.class %></td>
+        <td><%= t mat_prod.matprod_is_batch_only.class %></td>
         <td><%= mat_prod.matprod_est_weight_gram %></td>
         <td><%= mat_prod.matprod_size_mm %></td>
         <td><%= mat_prod.matprod_length_mm %></td>
         <td><%= mat_prod.matprod_thikness_mm %></td>
-        <td><%= mat_prod.matprod_is_hollow %></td>
-        <td><%= mat_prod.matprod_is_solid %></td>
-        <td><%= mat_prod.matprod_is_melting_process %></td>
-        <td><%= mat_prod.matprod_is_weight_item %></td>
+        <td><%= t mat_prod.matprod_is_hollow.class %></td>
+        <td><%= t mat_prod.matprod_is_solid.class %></td>
+        <td><%= t mat_prod.matprod_is_melting_process.class %></td>
+        <td><%= t mat_prod.matprod_is_weight_item.class %></td>
         <td><%= link_to 'Show', mat_prod %></td>
         <td><%= link_to 'Edit', edit_mat_prod_path(mat_prod) %></td>
         <td><%= link_to 'Destroy', mat_prod, method: :delete, data: { confirm: 'Are you sure?' } %></td>

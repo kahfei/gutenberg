@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :cagegory_id %><br>
+    <%= f.label :category_id %><br>
     <%= f.collection_select(:category_id, @categories, :id, :category_code) %>
   </div>
   <div class="field">
@@ -73,11 +73,17 @@
   </div>
   <div class="field">
     <%= f.label :matprod_is_batch_serial %><br>
-    <%= f.check_box :matprod_is_batch_serial %>
+    <%= f.select :matprod_is_batch_serial,
+                [['Yes', true],['No',false]],
+                :include_blank => false,
+                :label => "matprod is batch serial" %>
   </div>
   <div class="field">
     <%= f.label :matprod_is_batch_only %><br>
-    <%= f.check_box :matprod_is_batch_only %>
+    <%= f.select :matprod_is_batch_only,
+                [['Yes', true],['No',false]],
+                :include_blank => false,
+                :label => "matprod is batch only" %>
   </div>
   <div class="field">
     <%= f.label :matprod_est_weight_gram %><br>
@@ -97,21 +103,33 @@
   </div>
   <div class="field">
     <%= f.label :matprod_is_hollow %><br>
-    <%= f.check_box :matprod_is_hollow %>
+    <%= f.select :matprod_is_hollow,
+                [['Yes', true],['No',false]],
+                :include_blank => false,
+                :label => "matprod is hollow" %>
+  </div>  
+  <div class="field">
+    <%= f.label :matprod_is_solid%><br>
+    <%= f.select :matprod_is_solid,
+                [['Yes', true],['No',false]],
+                :include_blank => false,
+                :label => "matprod is solid" %>
   </div>
   <div class="field">
-    <%= f.label :matprod_is_solid %><br>
-    <%= f.check_box :matprod_is_solid %>
-  </div>
+    <%= f.label :matprod_is_melting_process%><br>
+    <%= f.select :matprod_is_melting_process,
+                [['Yes', true],['No',false]],
+                :include_blank => false,
+                :label => "matprod is melting process" %>
+  </div>  
   <div class="field">
-    <%= f.label :matprod_is_melting_process %><br>
-    <%= f.check_box :matprod_is_melting_process %>
-  </div>
-  <div class="field">
-    <%= f.label :matprod_is_weight_item %><br>
-    <%= f.check_box :matprod_is_weight_item %>
-  </div>
+    <%= f.label :matprod_is_weight_item%><br>
+    <%= f.select :matprod_is_weight_item,
+                [['Yes', true],['No',false]],
+                :include_blank => false,
+                :label => "matprod is weight item" %>
+  </div>  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button %>
   </div>
 <% end %>
