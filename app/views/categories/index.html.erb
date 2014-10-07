@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Category Code</th>
       <th>Category name</th>
       <th>Updated user</th>
       <th colspan="3"></th>
@@ -12,8 +13,8 @@
   <tbody>
     <% @categories.each do |category| %>
       <tr>
-        <td><%= category.category_code %></td>
-        <td><%= category.category_name %></td>
+        <td><%= category.code %></td>
+        <td><%= category.name %></td>
         <td><%= category.updated_user_id %></td>
         <td><%= link_to 'Show', category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>

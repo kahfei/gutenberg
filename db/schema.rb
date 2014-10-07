@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825220118) do
+ActiveRecord::Schema.define(version: 20141007143335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: true do |t|
-    t.string   "category_name"
+    t.string   "name"
     t.integer  "updated_user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "category_code",   limit: 3
+    t.string   "code",            limit: 3
   end
 
   create_table "mat_prods", force: true do |t|
